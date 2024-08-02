@@ -1,34 +1,33 @@
+// client/src/components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f8f9fa;
-`;
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  color: #333;
-  margin-left: 1rem;
-  &:hover {
-    color: #007bff;
-  }
-`;
 
 const Navbar = () => {
   return (
-    <Nav>
-      <NavLink to="/">MercadoTCG</NavLink>
-      <div>
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/register">Register</NavLink>
-        <NavLink to="/create-listing">Sell</NavLink>
+    <nav className="navbar navbar-expand-lg navbar-light bg-white topbar mb-4 static-top shadow">
+      <Link className="navbar-brand d-flex align-items-center justify-content-center" to="/">
+        <div className="navbar-brand-icon rotate-n-15">
+          <i className="fas fa-laugh-wink"></i>
+        </div>
+        <div className="navbar-brand-text mx-3">MercadoTCG</div>
+      </Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">Login</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/register">Register</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/create-listing">Sell</Link>
+          </li>
+        </ul>
       </div>
-    </Nav>
+    </nav>
   );
 };
 
