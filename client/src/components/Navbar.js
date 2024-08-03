@@ -1,5 +1,3 @@
-// src/components/Navbar.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,19 +6,19 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" to="/">MercadoTCG</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/iniciar-sesion">Iniciar Sesión</Link>
+              <Link className="nav-link px-3" to="/iniciar-sesion">Iniciar Sesión</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/registrarse">Registrarse</Link>
+              <Link className="nav-link px-3" to="/registrarse">Registrarse</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/crear-anuncio">Vender</Link>
+              <Link className="nav-link px-3" to="/crear-anuncio">Vender</Link>
             </li>
           </ul>
         </div>
