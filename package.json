@@ -1,0 +1,18 @@
+{
+  "name": "mercadotcg",
+  "version": "1.0.0",
+  "description": "MercadoTCG - Trading card game marketplace",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": ["trading", "cards", "games"],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
